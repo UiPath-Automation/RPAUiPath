@@ -1,0 +1,1168 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.InUserEmailName="A.Bheem" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:ujia="clr-namespace:UiPath.Jira.IntegrationService.Activities;assembly=UiPath.Jira.IntegrationService.Activities" xmlns:ujic="clr-namespace:UiPath.Jira.IntegrationService.Client;assembly=UiPath.Jira.IntegrationService" xmlns:umae="clr-namespace:UiPath.MicrosoftOffice365.Activities.Excel;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umafe="clr-namespace:UiPath.MicrosoftOffice365.Activities.Files.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:usau1="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:usia="clr-namespace:UiPath.Slack.IntegrationService.Activities;assembly=UiPath.Slack.IntegrationService.Activities" xmlns:usic="clr-namespace:UiPath.Slack.IntegrationService.Client;assembly=UiPath.Slack.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="InUsername" Type="InArgument(x:String)" />
+    <x:Property Name="InUserEmailName" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>565.3333333333334,887.3333333333334</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Entity</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Descriptor</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Enums</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Telemetry</x:String>
+      <x:String>UiPath.BAF.Infrastructure</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Connection</x:String>
+      <x:String>UiPath.Slack.IntegrationService.Activities</x:String>
+      <x:String>UiPath.IntegrationCore.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
+      <x:String>UiPath.Jira.IntegrationService.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel.Enums</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.CEQL</x:String>
+      <x:String>UiPath.Jira.IntegrationService.Client</x:String>
+      <x:String>UiPath.Jira.IntegrationService.Client</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.Slack.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Jira.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Jira.IntegrationService</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Hostinger Automation" sap:VirtualizedContainerService.HintSize="450,822.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="vFAS_Username" />
+      <Variable x:TypeArguments="ujic:Search_user" Name="vFirstUserRecord" />
+      <Variable x:TypeArguments="ujic:Search_user[]" Name="vListofUser" />
+      <Variable x:TypeArguments="x:String" Default="[&quot;Hi  Please check Your creditinals&quot; + vFAS_Username]" Name="vBody" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Home | Hostinger" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="495dfcd8-6227-48c4-8e1a-1889fbaca886" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="ui:Image" Name="vOutlookScreenshot" />
+              <Variable x:TypeArguments="x:String" Name="vFilePath" />
+              <Variable x:TypeArguments="x:String" Name="vScreenshotpath" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dtExcel" />
+              <Variable x:TypeArguments="x:Boolean" Name="vElementExits" />
+              <Variable x:TypeArguments="x:Boolean" Name="vFilePathExists" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SVG'" sap:VirtualizedContainerService.HintSize="496,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/" CvElementArea="1793, 230, 50, 40" CvType="Icon" DesignTimeRectangle="1794, 227, 48, 48" DesignTimeScaleFactor="1.5" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl aria-labelledby='icon-menu' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-labelledby='icon-menu' tag='svg' type='' class='h-icon--no-custom-width h-icon' aaname='' /&gt;" Guid="c71fcd7e-f13e-4e2b-9a3d-10358b7456ea" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADXSURBVGhD7dhBCoJAFMbxLlJ4g7QTVNLBapyWFQZ2NUPsEKJuXxsXb/FgVuWnfg9+W3l/kBmY1XoTyZwwCB2D0DEIHYPQMQgdg9AxCF0wqChegjJ5/jR31IJBfd8Pnxt/mqYxd9SCQVnmIaLatpPzxZk7ajwU0DEIHYPQLS/omJ7kdn9A2B9Sc0ctGFTXn+FqG3/K8m3uqE0qqKoqc0ctGBQnO/H+av4C/+Scl22cmDtqyzsUpoZB6BiEbnlBfCT54fCRZA4YhI5B6BiEjkHoGISOQdgi+QJv8Is8IIMgEAAAAABJRU5ErkJggg==" InformativeScreenshot="3bf9823869c721aa14e3fc6eea46a1fa.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home | Hostinger' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvElementArea="1724, 226, 50, 49" CvType="Icon" DesignTimeRectangle="1725, 227, 48, 48" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl aria-labelledby='icon-account-circle' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-labelledby='icon-account-circle' tag='svg' type='' class='prevent-select h-icon--no-custom-width h-icon' aaname='' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Emails'" sap:VirtualizedContainerService.HintSize="496,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/" CvTextArea="1529, 522, 73, 22" CvTextArgument="Emails" CvType="Text" DesignTimeRectangle="1506, 498, 372, 72" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'Emails'" FullSelectorArgument="&lt;webctrl id='hpanel_tracking-h_header-header_menu_item-link-emails' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='hpanel_tracking-h_header-header_menu_item-link-emails' tag='A' type='' class='header-menu__item' aaname='Emails' check:innerText='Emails' /&gt;" Guid="c06c839b-1a15-4c0e-8d52-25f4daaab285" InformativeScreenshot="ecc2d427248f4980e9bab33210495200.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home | Hostinger' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Manage'" sap:VirtualizedContainerService.HintSize="496,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/emails" CvElementArea="1508, 802, 161, 68" CvTextArea="1545, 825, 84, 24" CvTextArgument="Manage" CvType="Button" DesignTimeRectangle="1511, 804, 155, 62" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Manage'" FullSelectorArgument="&lt;webctrl id='hpanel_tracking-emails-manage_button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='hpanel_tracking-emails-manage_button' tag='BUTTON' type='' class='h-button h-button-outline h-button-primary my-2 h-button-md' aaname='Manage' check:innerText='Manage' /&gt;" Guid="371bea55-5d29-4fbf-b11a-5c8054a635fc" InformativeScreenshot="c20c881aee1f38caf10d7002373acdcd.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Emails | Hostinger' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="496,185.33333333333334" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" Shortcuts="[d(hk)][k(Down)][u(hk)][d(hk)][k(down)][u(hk)]" Version="V3" />
+            <ui:SetFocus DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Set Focus 'DIV'" sap:VirtualizedContainerService.HintSize="496,107.33333333333333" sap2010:WorkflowViewState.IdRef="SetFocus_2">
+              <ui:SetFocus.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ef4fc0e0-59cc-41b8-8eaa-cbbf1ddcb939" InformativeScreenshot="6111077f107ce6812fdef76eeab403c5" Selector="&lt;webctrl tag='HP-ACTION-CARDS' /&gt;&lt;webctrl parentid='hpanel_tracking_emails_add-account' shadowhostid='' tag='DIV' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetFocus.Target>
+            </ui:SetFocus>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Create email'" sap:VirtualizedContainerService.HintSize="496,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/email/fabrikonaisystems.com/accounts?source=list" DesignTimeRectangle="486, 621, 662, 193" DesignTimeScaleFactor="1.5" FriendlyName="'Create email'" FullSelectorArgument="&lt;webctrl tag='HP-ACTION-CARDS' /&gt;&lt;webctrl parentid='hpanel_tracking_emails_add-account' shadowhostid='' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='HP-ACTION-CARDS' /&gt;&lt;webctrl parentid='hpanel_tracking_emails_add-account' shadowhostid='' tag='DIV' type='' class='hp-action-card__body' aaname='' check:innerText='Create email account&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;New email account for your domain' /&gt;" Guid="896b9cc3-2eaa-430b-9485-5f2347f8150b" InformativeScreenshot="5123955e5c331a7daf4ec09f111236a4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Email Accounts | Hostinger' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="0.2" DisplayName="Type Into 'email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="496,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" Text="[InUserEmailName + &quot;[k(Tab)]&quot;]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/email-create-account/15536607_email_5920191/fabrikonaisystems.com/start" CvElementArea="329, 821, 969, 76" CvType="InputBox" DesignTimeRectangle="331, 893, 966, 72" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl id='email-onboarding-email-account-name' tag='HP-FORM-FIELD' /&gt;&lt;webctrl shadowhostid='email-onboarding-email-account-name' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='email-onboarding-email-account-name' tag='HP-FORM-FIELD' /&gt;&lt;webctrl shadowhostid='email-onboarding-email-account-name' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="7179c29e-57dd-4fde-bc71-90b076dc8e54" InformativeScreenshot="80093e834c1a10759c07a178a78e7c89.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Set Up Your Email Account | Hostinger' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvElementArea="322, 929, 1275, 75" CvType="InputBox" DesignTimeRectangle="1297, 893, 292, 72" ElementType="Text" FriendlyName="'email'" FullSelectorArgument="&lt;webctrl id='email-onboarding-email-account-name' tag='HP-FORM-FIELD' /&gt;&lt;webctrl aaname='@fabrikonaisystems.com' shadowhostid='email-onboarding-email-account-name' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='email-onboarding-email-account-name' tag='HP-FORM-FIELD' /&gt;&lt;webctrl aaname='@fabrikonaisystems.com' shadowhostid='email-onboarding-email-account-name' tag='SPAN' type='' class='field__input field__input--dropdown-disabled' check:innerText='@fabrikonaisystems.com' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASgAAABMCAYAAADeFSrhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAOSSURBVHhe7drrS5NhGMdx/+YgooNimVpiByrzEGGFpR1MogNERWiZZplGB9is2TbdUnRmO9mgXe3e7ief5Z3YC7dr6/uBH0Vds1d9eXyqQaxgICjfkxnGGKvawuGoxBZjtkoiZYFKpzecH2KMsd1eOByR0OeQZLNZW6U/AvXzZ55IMcYquqXlFYkUnpxCn+cllUrbIpU0mDCZRaPR4o+MMVbJmTDFFuNlT06e309QAKANgQKgFoECoBaBAqAWgQKgFoECoBaBAqAWgQKgFoECoBaBAqAWgQKgFoECoBaBAqAWgQKgFoECoBaBAqAWgQKgFoECoBaBAqAWgQKgFoECoBaBAqAWgQKgFoECoBaBAqAWgQKgFoECoBaBAqAWgQKgFoECoBaBAqAWgQKgFoECoBaBAqAWgQKgFoECoFZDMBAUxhirxuaCcxIOhyWRSNgkleMJCkDV5PN5yWQyEo/Fi6HK5XL2d0oIFAAVzFOUiZQfgQKghnmS8n+7R6AAqGG+3fM/RREoAGqYd1LmxbmHQAFQxfzrnodAAVCFQAFQi0ABUItAAVCLQAFQi0ABUItAAVCLQAFQi0ABUItAAVCLQAFQi0ABUItAAVCLQAFQi0ABUItAAVCLQAFQi0AB/5nE2rpEIrHizM81I1BAHUunM/J0dFIuXRmW1vbzsmdvm3Otx7oLN7dl7NkryWSy9tPVR6CAOrRWeDK6NnTXGaOdbLDw2fX1pP1q1UOggDrz/MW07D/U6QzPv+xg00mZevXWftXqIFBAnUilMtJ7YcgZG28mOl09AzI88rC4ru4BOdB4wnnrrf/yLclmN+yfUlkECqgDCwtfpenwaWdgzJpbzsjM7Ed7vdXr6XfS2HzK+VmzlrYuWV5etdeVQ6CAGpdIfJOm5r/H6Xhn347eJ62ursnRbV6kHy1EKplK2+vKIFBADfuRy0l7R48zKGbmySeZLI9KIBiS0bGp4gLBefurJSuFSG33JHX67CV7WRkECqhh5j2SKyTe3n/Y/Atunn66e69uuenpGyz+dwTPxOTMlhv/Hj8Zt5e7j0ABNSo0H3UGxNuR1nP2suRi/03nndnAtTv2qmTfgQ7nnbdKvY8iUECNOnPusjMe3oZu3LeXItFo3Hnj39Lyir0WuXDxuvPGm4ldJRAooAbNffriDId/9x48tdci4xNvnDf+Tb6ctdciI3ceOW/8i0Rj9nr3bAZK5BfuG2anglBKoQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="496,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" Text="[&quot;Fabrikon@123&quot; +&quot;[k(Tab)]&quot; + &quot;[k(Tab)]&quot;]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/email-create-account/15536607_email_5920191/fabrikonaisystems.com/start" CvElementArea="324, 834, 1271, 75" CvType="InputBox" DesignTimeRectangle="331, 835, 1186, 72" DesignTimeScaleFactor="1.5" ElementType="InputBoxPassword" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl id='email-onboarding-email-account-password' tag='HP-FORM-FIELD' /&gt;&lt;webctrl shadowhostid='email-onboarding-email-account-password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='email-onboarding-email-account-password' tag='HP-FORM-FIELD' /&gt;&lt;webctrl shadowhostid='email-onboarding-email-account-password' tag='INPUT' type='password' class='' aaname='' /&gt;" Guid="134272de-5375-4ff2-93bc-479a8a1bba0f" InformativeScreenshot="261e99b3cb32658243b7d1a8e1f7e1fb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Set Up Your Email Account | Hostinger' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1529, 854, 36, 36" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl id='email-onboarding-email-account-password' tag='HP-FORM-FIELD' /&gt;&lt;webctrl shadowhostid='email-onboarding-email-account-password' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl id='email-onboarding-email-account-password' tag='HP-FORM-FIELD' /&gt;&lt;webctrl shadowhostid='email-onboarding-email-account-password' tag='svg' type='' class='h-icon icon-gray icon-static-view-box field__icon field__icon--right field__icon--clickable' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAM5SURBVFhH7ZfpTxpRFMX7Nzfp4lqtW6VajaKAxrjhVsWlqN20VlvrXrcuilsLFgsRrIK4Jd7OnbkvDsxlBoQm/cAvOYnB8947b+bNnTt34D8nEzBVMgFTJRMwVTIBUyVtAYNHx+B2e2Xh3+niVgFPTyMwMTkLLW0OKCmrh7v3SlmVPLFInn6Y+rAAkcgZjU6OpAIeSVems9vJhklEXdLY4+MQzZYYCQf8+GkJsnIr2IWTUU7+M5hfWKVZjTEMGA5HwNbYzS4mhIvWWe3gGHgtq85ih+y8StYr1NzaB2dn57RKfHQD7u//hvzCanYBVEFRDSyvfCO3lsWldcgrqGLHoopK68DvD5CbJ27AYPAP5BfED1de0ZDQeQoEjqBY50EqlkKGwqfk1sIGvLi8hDKTlZ0QhTsPhaIn3XTtwuTUvKxN1x79qnAohdS7ktW1LeTUwgbEc8RNJPTlq4ucIO/eYuvQeKwNXXI5EszMLms8ao2NT5MzGk3A3T0PO4HQ4xIzORWamntZH8reOUQuhQfZJtYnxJ1HTcAacys7WKj7+Qg5ATyeA9ajls9/SG6AxqYe1iOEm40lKuDW9g92oFrDoxPkBpie+cx61JqdWyE3wMDQW9ajltvjJbdCVMDt7Z/sILVeOMfJbXyuUOgRDDnHWI9aOztucitobrHF1skOFGqzD5AT4JfXx3rUOjjwkxuk4uxgPUK2xi5y3qAJ6NnXP1dYLtRgw8D5UO0dg+RSMHq7eKUNx6IJiDiH37ETCK2sfienUmbqrdoy0yA9EOoyg2cx1qPW6Kv35IyGDXh1dSW/KbiJUFhqTkJhcitsbGKhnpNbK9dWTKE+DELeo/iFurKqiZxa2IAINp1672GTtIGTk+iQHFjb8M3DzYHC/8VuVk3cgAg+BEbNwtr6Brm14G3N1blyhcW14PPd1EkO3YBIou0Wvu76B99An+MlmOvbDXvHtLRbgutrpWF9mPOUXSwZyQ3r4hrNbExCAQUBqQXD0sEtbKT7WSbo6R3RPW8cSQUU4G3Hjya8TdjPcYFQpeVWubDjk31+fkGjk+NWATnUn534cZUu0hbwX5EJmCqZgKmSCZgaAH8BvUBUWDTsgCYAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Create'" sap:VirtualizedContainerService.HintSize="496,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/email-create-account/15536607_email_5920191/fabrikonaisystems.com/start" CvElementArea="1477, 695, 149, 68" CvTextArea="1514, 719, 75, 19" CvTextArgument="Create" CvType="Button" DesignTimeRectangle="1480, 698, 144, 62" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Create'" FullSelectorArgument="&lt;webctrl id='hpanel_tracking-email-create-account-create_button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='hpanel_tracking-email-create-account-create_button' tag='BUTTON' type='' class='h-button h-button-primary my-2 h-button-md onboarding__button' aaname='Create' check:innerText='Create' /&gt;" Guid="903cb5d2-3c1a-4dba-adb9-324e2a96453e" InformativeScreenshot="2fe3b356b69ba65cadaf9aa935e389e5.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Set Up Your Email Account | Hostinger' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvElementArea="1477, 695, 149, 68" CvTextArea="1514, 719, 75, 19" CvTextArgument="Create" CvType="Button" DesignTimeRectangle="1517, 715, 70, 28" ElementType="Text" FriendlyName="'Create'" FullSelectorArgument="&lt;webctrl parentid='hpanel_tracking-email-create-account-create_button' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hpanel_tracking-email-create-account-create_button' tag='SPAN' type='' class='trans' aaname='Create' check:innerText='Create' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAgCAYAAAC1v+5NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAARcSURBVGhD7ZhPS+NaGMbvF/NLdDvri4uuXBSEWRRBkC6UC4XBxRSGLpxNQblgkQqKUBARCkOFGYQKLWKHpNXEmraJbZ95k5z0vCdJbTrMBbnkhd/mnJPknOe8/9q/1tcekLKcVKiEpEIlJBUqIalQCUmFSkgqVEJSoRKSCpWQxUJlevh6PEZXm8Kx4Zs9g9W10Th4Qj7umf8xsULldoboDoU4i0wbo5KNPvsu2DRxXrE8Kpsx879BVKiPFvSJEMO1yQxm20brxibvmolBYf0RypnQ8++BA0dsEOgcxMz/BiGhejhviy+QOXcWSh/4/APyuyPoQSiSdQ91Zf49UDyRN/3fCLU7hiU+ANvG0QJv2T+dikVkbQvb3ngf1Uvf81pnz95YfusFjdsprIGNKnt+fU1D6WCEVted89FvRqhtaWwN5yf2/rHQbMv1sbly1/I9vy8937oXe7qx8JWvJXIbBuqXrzCDd2qvaB4b2Is5tyJU6UwKYF48KQsVMjr2cn0UXTZ05LzxJzT64mFjjCNyfxkADmrBs1kTTU0MR2wG/cQQ7wvoofY9FPLcNBb+LOSixvZAwu8f8v2FzKCLDeVfRajad7GQNtz6rC5cDhMqYsEm6dC37NAG3eCphSu6VWseLe63f87fu334KsbJhhO0LizUL2zorNjML/WL7XnGvEq7ZgdeKL06tzOGKaa9yyFvrv/rejjbG1WzfbHeZYFQUzS25XgywkJN0Tk2UfI8r+eHCAtt5/YFBfa8snnKjX44a6jdBAd1cM5vmacJKiqlYJwoXcjIiOYoHed3YpL22NyRl6JeJM3tyucWetSPohxPhipU97AXWcNDW7/2y7dkiM7cS5xQTnPRUAjC3cNCV6xeTagBOmIOQwdXyh6Ia1kIzDOZfhShynX5gdWrGRdqgqtcdE3l+o1coxjLJ5lHz6veyj4rCfU3E3iJ8TytCLX+2ZYbomrGQ4OTKw5FJSEuByh641wonjgl8gAzdM9CN6lginfqqPJETjlt/t07Jt5KHvUiPUqzY74tqe5IZ1GFWjPQHIiXuIc5fgxVICJjKCFmXRpibrlQPDGbp4/qPK+k2aBNYIeidqXKyraS5FcSip0x9E6XfDYI7R622VxIqAcUlLJOR6Z+5aryjPKWiSpVho4hJjx7ZQl2uVDrmQFa84pEyb5ioEANbX7zGY176Tn6SSAiE8pLrr6A+S0KH17ZQkIpIhpBHgq8VO0DnfsRjj5Si0MXVa44C/vIiFBuj1GmzvbNnODZFK0vPGEnEIoIX0TEeF9ETWz9XoxHbCbbgJBQ8XmI5z01KqI2I09Ui1GMUD7urbXCv+08m8Fq0y1s8LLqkkwol8KnEbrzEA+M+hnKd5GuODvAD9Zpe2ZP0PzUw9E3MR4WiojuP7SnRUWCPLAuPJezUKg5H3oiZv24/ZN/ryzKB3HwtX/0L57Y3BhluVApHqlQCUmFSkgqVEJSoRKSCpWQVKhEPOAX+G4A1Le6El4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State 'Set Up'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="496,54" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,301.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="388,185.33333333333334" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][k(pgdn)][u(hk)]" Version="V3" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,107.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/email-create-account/15536607_email_5920191/fabrikonaisystems.com/configure?email=test02@fabrikonaisystems.com" CvTextArea="725, 635, 467, 31" CvTextArgument="Set Up Your Email Account" CvType="Text" DesignTimeRectangle="175, 627, 1569, 48" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'Set Up'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h2' idx='2' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='text-heading-1 text-center' tag='H2' aaname='Set Up Your Email Account' check:innerText='Set Up Your Email Account' /&gt;" Guid="9ca53775-420d-425c-8de3-700fcbc8b6e9" InformativeScreenshot="5a02c99779ea3dd63130d919e678a173.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Set Up Your Email Account | Hostinger' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NCheckState DisplayName="Check App State '2Configure apps'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="496,54" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,390" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="388,185.33333333333334" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_6" Shortcuts="[d(hk)][k(down)][u(hk)]" Version="V3" />
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,164.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                          <ui:Click.CursorPosition>
+                            <ui:CursorPosition Position="Center">
+                              <ui:CursorPosition.OffsetX>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetX>
+                              <ui:CursorPosition.OffsetY>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetY>
+                            </ui:CursorPosition>
+                          </ui:Click.CursorPosition>
+                          <ui:Click.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="22abe370-52a7-436f-987c-fb4cae73e0a5" InformativeScreenshot="e34e502b9898b8d95e0ec54f7a916d31" Selector="&lt;html app='msedge.exe' title='Set Up Your Email Account | Hostinger' /&gt;&lt;webctrl tag='DIV' type='[object Object]' visibleinnertext='Thunderbird' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='DIV' type='[object Object]' visibleinnertext='Outlook' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:Click.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:Click>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,107.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/email-create-account/15536607_email_5920191/fabrikonaisystems.com/configure?email=Test01.1.2@fabrikonaisystems.com" DesignTimeRectangle="270, 329, 1380, 388" DesignTimeScaleFactor="1.5" FriendlyName="'2Configure apps'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='app-wrapper' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='h-card h-card--no-footer h-card--no-hover h-card--no-body-padding onboarding__configure-account-step' parentid='app-wrapper' tag='DIV' aaname='' check:innerText='2&amp;#xD;&amp;#xA;Configure apps and devices (Optional)&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Select an email client you want to setup&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Apple Mail' /&gt;" Guid="f98c1106-f4fc-431c-a16f-90bc00382db1" InformativeScreenshot="947fcb00e7025e8eef5da58d27d50273.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Set Up Your Email Account | Hostinger' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <ui:SetFocus DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Set Focus 'DIV'" sap:VirtualizedContainerService.HintSize="496,107.33333333333333" sap2010:WorkflowViewState.IdRef="SetFocus_1">
+              <ui:SetFocus.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="84ded01a-b6f8-4fc5-95ec-3a504101507d" InformativeScreenshot="e34e502b9898b8d95e0ec54f7a916d31" Selector="&lt;webctrl idx='2' tag='DIV' type='[object Object]' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetFocus.Target>
+            </ui:SetFocus>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Outlook'" sap:VirtualizedContainerService.HintSize="496,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/email-create-account/15536607_email_5920191/fabrikonaisystems.com/configure?email=Test01.1.2@fabrikonaisystems.com" CvTextArea="680, 560, 19, 19" CvTextArgument="O" CvType="Text" DesignTimeRectangle="678, 548, 50, 48" DesignTimeScaleFactor="1.5" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl class='h-mb-8' idx='2' parentid='app-wrapper' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl class='h-mb-8' type='' parentid='app-wrapper' tag='IMG' aaname='' /&gt;" Guid="6131d4cc-27a7-4255-992a-a8774ce7762b" InformativeScreenshot="3368cf284c1db9f70990621d68875132.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Set Up Your Email Account | Hostinger' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvElementArea="584, 508, 235, 175" CvTextArea="654, 614, 96, 22" CvTextArgument="Outlook" CvType="Button" DesignTimeRectangle="656, 608, 94, 36" ElementType="Text" FriendlyName="'Outlook'" FullSelectorArgument="&lt;webctrl aaname='Outlook' class='text-bold-1' parentid='app-wrapper' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Outlook' class='text-bold-1' parentid='app-wrapper' tag='SPAN' type='' check:innerText='Outlook' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAoCAYAAAAFZi8EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAUcSURBVGhD7ZnBSxtLHMffP+LDWw8BCQYvQgoBDwsRFD0YFJ4oKF5CeniSg2Ev4qGSS2sPxncw9vL6DiU5SBTEFgpeihaECIUUChY8LHhY8LCQw/fNxtns/Daza9LYl2nffOEH+tuZ3Znf5ze/md38Bi0lpEEoIg1CEWkQikiDUEQahCLSIBSRBqGINAhFpEEoop8bRNOBdWO1zWly/6B054/Fshzu7E7RIJwGars5LBojiP0+jCHPEmPIrJj4+9LiDQekzzvItMeVRukz9w9Ijd20H6O5HTS4vxuFgrBOTGQS3iTDzcjuod4b/C5lo/G+ikrVtTNccy/Rrw7CPs4h1Z4gt/gIjMkkjPGAn1lsYQf1Ry8L77D51HtGDjXuJfqlQbiTi3uTY5aaR+nDNUjS39VRMSdIuUqZRyyHH1NHKLTv/78DYaPyzJsYsxQLwC2/JFGdPdiHMYGXl/zCY4gEuX8QjlXHWavMVXF21cPG7rAS+fHovkSeXKBxG16HewIReD4FcXOA1fbEhpF9+1COX+DllN9+fOsd9wcGtXHEvaLEjBeCyMpiu5/UhLZdgHAu95CdfCL055ZIIrtfpytdVNPC6fM0xsXqwG18wcSp5JwSBYIm7RgKxzS2FMThmn+jOMvCLrKGPHy2iLrMPyAQ9nEehiSQohmyktqso7QsgSdaYgalK96eKwwE3XPHWIJ3Hj0IiCiioSKB80vId4O4PEDBzKPwJ8vG9vUkVl1fy4o4veFto0DcvkFWhJBIY333AJV/drA+R4McXPnnxQly3Vg2UWalqfx8hoKd2sK5kKzS+F2xMQp9MrteqlL1D+KqiGmvz2OA8NTnHlF/IQTz6Vpgr7NRy4/416f8lQybAsy8CgSOzdd/JoNY9SF2xO+WzTHlt02xOIQVe/VWhKe+QDRQWvD8LKOLF9wv6NMWDLHvV+4/yQu1fAmVjsjRA02MlTZPZM6zaygIY3joiE9A2G+X/BvF8zjl/ihZr+f9PgZbqtw/WBDs3kJWF465m0h8vt/m+q+HkzEsYYmfGBvbF94oRHSzJhMbweZ77g/VNcrL/gNjQsAHC0J8GRzG+iF3i2pWsd7uy0Cc3LtJYgmHD1H1V0LZY5nubb0UUB6bK/xvZj2tiGBgh+bYQCI609MABUcGtXKAjtNeaBC5+gKhQGnqZ49o6YNJPm+MLhdx1hFFB41qHtPC8o+xYIuHMlrm5lH+xi+0xDbLjTH/+oMgktj+xP2iImCSoMTZNfGo6R5PBVBks27SshYMXvDzT+Rm7Tq/59Tkib58uPYEqT+W7o+P+XlMB783yd7Av+1hUWzjHR9fbyEbOD5KQQTKi/vFt/Wta3IJZS97o1aVTbNxKJ7EYt49/rpfkwW/+3J1QvO0wfYJcf6jc3zuz9IYFfxuuRH3ECkI10/u1/ky50oKws3Y8xcz5KFhFjPWUPECQ2Tj1BSzPtBvIYf1We9/GYjOgHS0jQLBZH/cot/NJCbN0OY1Kz/hY2+ZJPnCQLixIBUgPsHKOIURAuJezpcqtleSUiCxcZbh+2ewot6+2YRqJs0i14zsDs7ZJGobnk8O4r4EmlidEn8P6R5ES1/lcxidnMf2ofTjOhdLxv0cMsHVHx9BJr/XGn9Q4SCYguUwUC4jQbQV+CXMivjwJZVj+33vuO+/lvjrWU/jd2B7/Zj9qF8BuwOh9cOlQSgiDUIRaRCKSINQRBqEItIgFJEGoYg0CEWkQSgiDUIJAf8C6R2drvLWbNMAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="0.2" DisplayName="Click 'Automatic'" sap:VirtualizedContainerService.HintSize="496,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/email-create-account/15536607_email_5920191/fabrikonaisystems.com/configure?email=test02@fabrikonaisystems.com" CvTextArea="573, 855, 129, 21" CvTextArgument="Automatic" CvType="Text" DesignTimeRectangle="331, 764, 617, 156" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Automatic'" FullSelectorArgument="&lt;webctrl aria-role='button' class='clickable-card' idx='5' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' class='clickable-card' type='' tag='DIV' aaname='' check:innerText='Automatic' /&gt;" Guid="45f87217-33fb-4db5-aed4-73ffc0c59715" InformativeScreenshot="cd8249c3159f920f3732ac0d7558b783.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Set Up Your Email Account | Hostinger' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="496,185.33333333333334" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" Shortcuts="[d(hk)][k(pgdn)][u(hk)]" Version="V3" />
+            <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="screenshot.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="496,197.33333333333334" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_2" OutImage="[vOutlookScreenshot]" SaveScreenshotTo="Image" Version="V3" />
+            <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="496,1297.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_17">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="vfolderpath" />
+                <Variable x:TypeArguments="x:Boolean" Name="vFolderPathExists" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[vfolderpath]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">["C:\Users\Admin\Documents\UiPath\"]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" Exists="[vFolderPathExists]" sap:VirtualizedContainerService.HintSize="434,118.66666666666667" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[vfolderpath]" PathType="Folder" />
+              <If Condition="[vFolderPathExists=True]" sap:VirtualizedContainerService.HintSize="434,897.3333333333334" sap2010:WorkflowViewState.IdRef="If_2">
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,356.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334,82" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[vfolderpath + &quot;Screenshots&quot;]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Yes&quot;]" />
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,356.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334,82" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[vfolderpath + &quot;Screenshots&quot;]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;NO&quot;]" />
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+            <Assign sap:VirtualizedContainerService.HintSize="496,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[vFilePath]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">["C:\Users\Admin\Documents\UiPath\Screenshots\"]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" Exists="[vFilePathExists]" sap:VirtualizedContainerService.HintSize="496,118.66666666666667" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[vFilePath]" PathType="File" />
+            <Assign sap:VirtualizedContainerService.HintSize="496,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[vScreenshotpath]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[vFilePath + "OutlookScreenshoot"+Now.ToString("dd/MM/yyyy")]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <If Condition="[vFilePathExists = True]" sap:VirtualizedContainerService.HintSize="496,1008" sap2010:WorkflowViewState.IdRef="If_3">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,412" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:SaveImage DisplayName="Save Image" FileName="C:\Users\Admin\Documents\UiPath\Screenshots\Untitled.png" sap:VirtualizedContainerService.HintSize="334,137.33333333333334" sap2010:WorkflowViewState.IdRef="SaveImage_2" Image="[vOutlookScreenshot]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:SaveImage>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;image yes&quot;]" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,412" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:SaveImage DisplayName="Save Image" FileName="C:\Users\Admin\Documents\UiPath\Screenshots\Untitled.png" sap:VirtualizedContainerService.HintSize="334,137.33333333333334" sap2010:WorkflowViewState.IdRef="SaveImage_3" Image="[vOutlookScreenshot]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:SaveImage>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[&quot;NO image&quot;]" />
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Complete, I’ve'" sap:VirtualizedContainerService.HintSize="496,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/email-create-account/15536607_email_5920191/fabrikonaisystems.com/configure?email=test02@fabrikonaisystems.com" CvElementArea="762, 764, 394, 65" CvTextArea="798, 786, 321, 25" CvType="Button" DesignTimeRectangle="765, 767, 389, 60" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Complete, I’ve'" FullSelectorArgument="&lt;webctrl class='h-button-v2' parentid='app-wrapper' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl class='h-button-v2' parentid='app-wrapper' tag='BUTTON' type='' aaname='Complete, I’ve set up my client' check:innerText='Complete, I’ve set up my client' /&gt;" Guid="361d39c6-db53-43b7-a494-eda78de25764" InformativeScreenshot="8191865a2f7fd68a18972b369d60784b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Set Up Your Email Account | Hostinger' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.CvTextArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">Complete, I've set up my client</Literal>
+                    </InArgument>
+                  </uix:TargetAnchorable.CvTextArgument>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State 'Manage Email Accounts'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="496,54" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,223.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="ui:UiElement" Name="ElementFound" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'INPUT  hpanel_tracking-...'" FoundElement="[ElementFound]" sap:VirtualizedContainerService.HintSize="388,107.33333333333333" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                    <ui:WaitUiElementAppear.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b96ca559-6d2e-4722-a961-ad840e2e2614" InformativeScreenshot="f9f9c913924306c617f0ec377e0313d3" Selector="&lt;webctrl id='hpanel_tracking-search-bar' tag='INPUT' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:WaitUiElementAppear.Target>
+                  </ui:WaitUiElementAppear>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,107.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/email/fabrikonaisystems.com/accounts" CvTextArea="483, 822, 353, 33" CvTextArgument="Manage Email Accounts" CvType="Text" DesignTimeRectangle="485, 812, 1369, 48" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'Manage Email Accounts'" FullSelectorArgument="&lt;webctrl class='h-mb-24' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl class='h-mb-24' tag='H2' type='' aaname='Manage Email Accounts' check:innerText='Manage Email Accounts' /&gt;" Guid="eccbc4af-6ad4-4265-85b3-a87dbf22a202" InformativeScreenshot="fe7a890cbe918a06455001975054c62c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Email Accounts | Hostinger' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <ui:SetFocus DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Set Focus 'INPUT  hpanel_tracking-...'" sap:VirtualizedContainerService.HintSize="496,107.33333333333333" sap2010:WorkflowViewState.IdRef="SetFocus_3">
+              <ui:SetFocus.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e8fad7fe-09cc-4be0-b5a8-3400b0aac06c" InformativeScreenshot="06d22a1b499e9175f7e8431eeae80fb6" Selector="&lt;webctrl id='hpanel_tracking-search-bar' tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetFocus.Target>
+            </ui:SetFocus>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT hpanel_tracking-s…'" sap:VirtualizedContainerService.HintSize="496,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/email/fabrikonaisystems.com/accounts" CvTextArea="593, 548, 69, 19" CvTextArgument="Search" CvType="Text" DesignTimeRectangle="522, 604, 1295, 50" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT hpanel_tracking-s…'" FullSelectorArgument="&lt;webctrl id='hpanel_tracking-search-bar' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='hpanel_tracking-search-bar' tag='INPUT' type='text' class='form-control search-input--icon-left' aaname='' /&gt;" Guid="52c788ec-9843-49e3-9ae8-4b54e34eceab" InformativeScreenshot="0f39a7d0fc30391eabf888561ae31f3d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Email Accounts | Hostinger' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:UiElementExists DisplayName="Element Exists 'INPUT  hpanel_tracking-...'" Exists="[vElementExits]" sap:VirtualizedContainerService.HintSize="496,107.33333333333333" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+              <ui:UiElementExists.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e2e63fe8-9440-4c85-aebc-40f347f565b2" InformativeScreenshot="f9f9c913924306c617f0ec377e0313d3" Selector="&lt;webctrl id='hpanel_tracking-search-bar' tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:UiElementExists.Target>
+            </ui:UiElementExists>
+            <If Condition="[vElementExits = True]" sap:VirtualizedContainerService.HintSize="496,54" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,509.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Manage Email Accounts'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" Text="[InUserEmailName]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/email/fabrikonaisystems.com/accounts" CvTextArea="593, 729, 69, 19" CvTextArgument="Search" CvType="Text" DesignTimeRectangle="522, 714, 1295, 50" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT hpanel_tracking-s…'" FullSelectorArgument="&lt;webctrl id='hpanel_tracking-search-bar' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='hpanel_tracking-search-bar' tag='INPUT' type='text' class='form-control search-input--icon-left' aaname='' /&gt;" Guid="1829d250-032b-4d84-a398-5ba168ee5685" InformativeScreenshot="6b1526fe7de51dacadaf936a0425c85c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Email Accounts | Hostinger' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="483, 615, 353, 33" CvTextArgument="Manage Email Accounts" CvType="Text" DesignTimeRectangle="485, 605, 1369, 48" ElementType="Text" FriendlyName="'Manage Email Accounts'" FullSelectorArgument="&lt;webctrl class='h-mb-24' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl class='h-mb-24' tag='H2' type='' aaname='Manage Email Accounts' check:innerText='Manage Email Accounts' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NGetText DisplayName="Get Text 'Status'" sap:VirtualizedContainerService.HintSize="334,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" TextString="[vFAS_Username]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/email/fabrikonaisystems.com/accounts" CvTextArea="518, 738, 358, 24" CvType="AnyWordGroup" DesignTimeRectangle="17, 128, 0, 0" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'email'" FullSelectorArgument="&lt;webctrl id='hosting-email-accounts-table' tag='TABLE' /&gt;&lt;webctrl tag='P' aaname='*' /&gt;" FuzzySelectorArgument="&lt;webctrl id='hosting-email-accounts-table' tag='TABLE' /&gt;&lt;webctrl tag='P' type='' class='font-weight-bold text-dark' /&gt;" Guid="6d23bd1c-f8d7-43b7-ae04-07219d7feeeb" InformativeScreenshot="5a9200a852188ae7b9e1acbce8cd6461.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Email Accounts | Hostinger' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="1088, 632, 69, 18" CvTextArgument="Status" CvType="Text" DesignTimeRectangle="1090, 628, 67, 28" ElementType="Text" FriendlyName="'Status'" FullSelectorArgument="&lt;webctrl id='hosting-email-accounts-table' tag='TABLE' /&gt;&lt;webctrl aaname='Status' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='hosting-email-accounts-table' tag='TABLE' /&gt;&lt;webctrl aaname='Status' type='' tag='SPAN' class='trans' check:innerText='Status' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEcAAAAgCAYAAABAQWX9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAARlSURBVGhD7Ve/axtZEL5/xCGdi0AQNm4EMghUCGSwcQoLH0Q4YJFGyEXCFhFqjIsYN5KukJwisopLXElFsAzGNgScQthFYAOGPTiQwYXAxUIKgYvv5q3ez9Vqcxc7uYPbD6bwvPdG73078834F0SYiIicEETkhCAiJwQROSGIyAlBRE4IInJCME7O4ALvXq8im36MRw8eYmp2DumnRTQOHQz5lv8LTHK+1JCbJUIYKQGWfNWFy7cq9HHe6aDNrNfnvrvChXPKY57aAb/5c6CRc4HqoiIi/ayMJl2u+XoZ6Zjy51t+Aroo8bUpIu9+4KCxwmOu1OivfweKnMsasuKRvgu5+2uSnKn1PQy438P1HvJi7d7IOcHmPI/5nyPn2S4ViwbXxrEoHZnmpE1lC6UXGcTFucVVlJiP7N1nb5PC0MFB3UJ+JYH0ArNlFCp7sA2mBziusPOrWBIx5zN4yWNWj/jm6y6q3Ff6/WLkkxAxmFF87h1hCOewhtJ6it8hgdzGFt3VuISEIsd9j4JWPkvlDpxQBdbKKcBKh3wbQ5iWxRK0V6iKVk4Blq3zHNI/5Fi26jGKOOBepmMH5cSoyYzZNHJvTBoZDEG26xnf4Wmk1y3qVDaGt3yTBKU+Y190NWass/EvsnnKtxlaNo0sfalmZxfVjQxmxLl5eoTHj4NmgZ2fU2uxxzJmoXUHcj7vyGx89MTy9LS9v4N8ku+NPUfbp/wGOSzt7P0iskFfeTaD0oeAbhR6UQLLGv643G96Cbhob6j4pSPu9qBlZZDmfA85h0Xue0hZokX882wkF2TnvurykcNxS7X5cRfbVJtxrdSYZeu+9PsWOTq+DjC4Vna2k5JxjTL8EeToZ7yKKKLa6uL8D3fi/BZMjg4S0nY5pUonRj+ol9jfIMft1VBYmOYXC7YfTg6h/8GaUBVUsvWzsXlKkuNensj0Or70b7vAdloEy6Bxyd0M3yKHrYvsI/HNWaKTUOfS5qqfQY4Hqop+r4tmpUi/r+klWaFjvluS03+TkZvi9IPmNhvVJyLIPyPHIZEXcXNvdc0yh87vJsc/dtzoXVeR0+/xUaRzAkd73PDIUqOI7/6qrK52kRObHswhX+nC9rTBxsGW1sUWd8zZgY0AYi2WQqnFxe1qtKyTE7c6GLCSvGV6Y3ZGkxw9U9ld9nwZTeRJAmi9Tg9md/3Sxeavws9MkaPfI/mK34Mw6DyX5MS3TkZODkNzxlu5z9hMcuQvObPrCJOP/VRG0rcmLJlWc4dJDt2losRamJxzCOeamJuWwpLMcq2sXCJUtO0gi/kqgjAmyINPweI5s1KkSXKCrnuivYykJnb6Y+3WGtKGEFK3sN6jf6X+9fCT42VXfQ1LcXVOJwe3fRrqtFmJGY0b2zRFs4888vk05+YMjY2EeYZsZmENjZ7/oweQI6G33a/cdxeQEN5rPAF5z8kteQxDV93lZvKpyeREiMgJQ0ROCCJyQhCRE4KInBBE5IQgImcigL8A4nBXfqlFBVEAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,696.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Manage Email Accounts'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" Text="[InUserEmailName]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/email/fabrikonaisystems.com/accounts" CvTextArea="593, 729, 69, 19" CvTextArgument="Search" CvType="Text" DesignTimeRectangle="522, 714, 1295, 50" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT hpanel_tracking-s…'" FullSelectorArgument="&lt;webctrl id='hpanel_tracking-search-bar' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='hpanel_tracking-search-bar' tag='INPUT' type='text' class='form-control search-input--icon-left' aaname='' /&gt;" Guid="1829d250-032b-4d84-a398-5ba168ee5685" InformativeScreenshot="6b1526fe7de51dacadaf936a0425c85c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Email Accounts | Hostinger' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="483, 615, 353, 33" CvTextArgument="Manage Email Accounts" CvType="Text" DesignTimeRectangle="485, 605, 1369, 48" ElementType="Text" FriendlyName="'Manage Email Accounts'" FullSelectorArgument="&lt;webctrl class='h-mb-24' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl class='h-mb-24' tag='H2' type='' aaname='Manage Email Accounts' check:innerText='Manage Email Accounts' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;If loop Existed&quot;]" />
+                  <uix:NGetText DisplayName="Get Text 'Status'" sap:VirtualizedContainerService.HintSize="334,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" TextString="[vFAS_Username]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/email/fabrikonaisystems.com/accounts" CvTextArea="518, 738, 358, 24" CvType="AnyWordGroup" DesignTimeRectangle="17, 128, 0, 0" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'email'" FullSelectorArgument="&lt;webctrl id='hosting-email-accounts-table' tag='TABLE' /&gt;&lt;webctrl tag='P' aaname='*' /&gt;" FuzzySelectorArgument="&lt;webctrl id='hosting-email-accounts-table' tag='TABLE' /&gt;&lt;webctrl tag='P' type='' class='font-weight-bold text-dark' /&gt;" Guid="6d23bd1c-f8d7-43b7-ae04-07219d7feeeb" InformativeScreenshot="5a9200a852188ae7b9e1acbce8cd6461.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Email Accounts | Hostinger' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="1088, 632, 69, 18" CvTextArgument="Status" CvType="Text" DesignTimeRectangle="1090, 628, 67, 28" ElementType="Text" FriendlyName="'Status'" FullSelectorArgument="&lt;webctrl id='hosting-email-accounts-table' tag='TABLE' /&gt;&lt;webctrl aaname='Status' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='hosting-email-accounts-table' tag='TABLE' /&gt;&lt;webctrl aaname='Status' type='' tag='SPAN' class='trans' check:innerText='Status' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEcAAAAgCAYAAABAQWX9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAARlSURBVGhD7Ve/axtZEL5/xCGdi0AQNm4EMghUCGSwcQoLH0Q4YJFGyEXCFhFqjIsYN5KukJwisopLXElFsAzGNgScQthFYAOGPTiQwYXAxUIKgYvv5q3ez9Vqcxc7uYPbD6bwvPdG73078834F0SYiIicEETkhCAiJwQROSGIyAlBRE4IInJCME7O4ALvXq8im36MRw8eYmp2DumnRTQOHQz5lv8LTHK+1JCbJUIYKQGWfNWFy7cq9HHe6aDNrNfnvrvChXPKY57aAb/5c6CRc4HqoiIi/ayMJl2u+XoZ6Zjy51t+Aroo8bUpIu9+4KCxwmOu1OivfweKnMsasuKRvgu5+2uSnKn1PQy438P1HvJi7d7IOcHmPI/5nyPn2S4ViwbXxrEoHZnmpE1lC6UXGcTFucVVlJiP7N1nb5PC0MFB3UJ+JYH0ArNlFCp7sA2mBziusPOrWBIx5zN4yWNWj/jm6y6q3Ff6/WLkkxAxmFF87h1hCOewhtJ6it8hgdzGFt3VuISEIsd9j4JWPkvlDpxQBdbKKcBKh3wbQ5iWxRK0V6iKVk4Blq3zHNI/5Fi26jGKOOBepmMH5cSoyYzZNHJvTBoZDEG26xnf4Wmk1y3qVDaGt3yTBKU+Y190NWass/EvsnnKtxlaNo0sfalmZxfVjQxmxLl5eoTHj4NmgZ2fU2uxxzJmoXUHcj7vyGx89MTy9LS9v4N8ku+NPUfbp/wGOSzt7P0iskFfeTaD0oeAbhR6UQLLGv643G96Cbhob6j4pSPu9qBlZZDmfA85h0Xue0hZokX882wkF2TnvurykcNxS7X5cRfbVJtxrdSYZeu+9PsWOTq+DjC4Vna2k5JxjTL8EeToZ7yKKKLa6uL8D3fi/BZMjg4S0nY5pUonRj+ol9jfIMft1VBYmOYXC7YfTg6h/8GaUBVUsvWzsXlKkuNensj0Or70b7vAdloEy6Bxyd0M3yKHrYvsI/HNWaKTUOfS5qqfQY4Hqop+r4tmpUi/r+klWaFjvluS03+TkZvi9IPmNhvVJyLIPyPHIZEXcXNvdc0yh87vJsc/dtzoXVeR0+/xUaRzAkd73PDIUqOI7/6qrK52kRObHswhX+nC9rTBxsGW1sUWd8zZgY0AYi2WQqnFxe1qtKyTE7c6GLCSvGV6Y3ZGkxw9U9ld9nwZTeRJAmi9Tg9md/3Sxeavws9MkaPfI/mK34Mw6DyX5MS3TkZODkNzxlu5z9hMcuQvObPrCJOP/VRG0rcmLJlWc4dJDt2losRamJxzCOeamJuWwpLMcq2sXCJUtO0gi/kqgjAmyINPweI5s1KkSXKCrnuivYykJnb6Y+3WGtKGEFK3sN6jf6X+9fCT42VXfQ1LcXVOJwe3fRrqtFmJGY0b2zRFs4888vk05+YMjY2EeYZsZmENjZ7/oweQI6G33a/cdxeQEN5rPAF5z8kteQxDV93lZvKpyeREiMgJQ0ROCCJyQhCRE4KInBBE5IQgImcigL8A4nBXfqlFBVEAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="496,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[vFAS_Username]" />
+            <umae:WriteCellConnections BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" AuthScopesInvalid="False" BrowserDriveId="72814b50b9c5dc57" BrowserItemFriendlyName="Excel.xlsx" BrowserItemId="72814B50B9C5DC57!78802" Cell="B3" ConnectionId="7a650644-52b4-49b3-befc-490220110092" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="496,312.6666666666667" sap2010:WorkflowViewState.IdRef="WriteCellConnections_1" ItemSelectionMode="Browse" RangeLocation="Sheet1" UseConnectionService="True" WhatToWrite="[vFAS_Username]">
+              <umae:WriteCellConnections.BrowserDriveName>
+                <InArgument x:TypeArguments="x:String" />
+              </umae:WriteCellConnections.BrowserDriveName>
+              <umae:WriteCellConnections.BrowserSiteUrl>
+                <InArgument x:TypeArguments="x:String" />
+              </umae:WriteCellConnections.BrowserSiteUrl>
+              <umae:WriteCellConnections.ItemIdBackup>
+                <usau:BackupSlot x:TypeArguments="umafe:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="umafe:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </umae:WriteCellConnections.ItemIdBackup>
+            </umae:WriteCellConnections>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="496,54" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,720.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:WriteCsvFile AddHeaders="True" DataTable="[dtExcel]" Delimitator="Comma" DisplayName="Write CSV" FilePath="C:\Users\Admin\Documents\UiPath\excel" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="True">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:WriteCsvFile>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Manage Email Accounts'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" Text="[InUsername]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/email/fabrikonaisystems.com/accounts?source=list" CvTextArea="593, 569, 69, 19" CvTextArgument="Search" CvType="Text" DesignTimeRectangle="522, 554, 1295, 50" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT hpanel_tracking-s…'" FullSelectorArgument="&lt;webctrl id='hpanel_tracking-search-bar' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='hpanel_tracking-search-bar' tag='INPUT' type='text' class='form-control search-input--icon-left' aaname='' /&gt;" Guid="bddb086d-9747-490e-95ba-049a3b36e41b" InformativeScreenshot="944de0138e2ea3133ffaec2a81dba682.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Email Accounts | Hostinger' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="483, 455, 353, 34" CvTextArgument="Manage Email Accounts" CvType="Text" DesignTimeRectangle="485, 445, 1369, 48" ElementType="Text" FriendlyName="'Manage Email Accounts'" FullSelectorArgument="&lt;webctrl class='h-mb-24' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl class='h-mb-24' tag='H2' type='' aaname='Manage Email Accounts' check:innerText='Manage Email Accounts' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                  <uix:NGetText DisplayName="Get Text 'email'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="495dfcd8-6227-48c4-8e1a-1889fbaca886" TextString="[vFAS_Username]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://hpanel.hostinger.com/email/fabrikonaisystems.com/accounts?source=list" CvTextArea="518, 777, 382, 25" CvType="AnyWordGroup" DesignTimeRectangle="17, 198, 0, 0" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'email'" FullSelectorArgument="&lt;webctrl id='hosting-email-accounts-table' tag='TABLE' /&gt;&lt;webctrl tag='P' aaname='*' tableCol='1' /&gt;" FuzzySelectorArgument="&lt;webctrl id='hosting-email-accounts-table' tag='TABLE' /&gt;&lt;webctrl tag='P' type='' class='font-weight-bold text-dark' /&gt;" Guid="07b70024-424d-4225-a9c8-a14ed86c8d21" ImageBase64="" InformativeScreenshot="7143d8cbe47ebc5816f43b5b31a26c02.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Email Accounts | Hostinger' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                    </uix:NGetText.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NGetText>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[vFAS_Username]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1042" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJTSURBVFhH7ZgxaxRBGIaPI0gIIYgECRJCCCIiEiRF8BeoSGpJZWEjiLVYiGBhYSl26VJYiFV+QRARCwvLkDJaCYoECWIh8XnW+XKb3Gxud08DSl542JuZb759d3dmduc6oXevPs+srX4YTcWhRJ4ujKViPa083rxz++rbLbgFJ1J1K9kfPsI9mEjVhysZ2E1swA0YSc2NRD8N/ABzfYFHMJma8zpgIHgP16GbwmqJ+LKBYBuewFQK268KA8FryHfMiNicgWCHcy2l0J4GGJCFFDpQxB5mYNdzpdCejg38bwZG4I8bWASvLBitoJu4BpvQl6utge+wU8KyeKVlnsOcOTlq6D58g71cbQ00QSPPoFg7OM7ASyjaj8JA4Or3ECbAx3IFNo7SQPAJ7kIxTjjXbDptT1Q6csuD7G8w+J1CkM/rMjjqF+ASzMNFuADn4RychTmYBftMwxmYgtMwCafgJPgIxmEMvAP9b1kqC3cpyPf4V8jdzqHxcRcnLYvKmzQ+gHHLHL2Cp+CIziZqS5WBGIR+FS1D3BFv9Qv4CX3J2jDIQPAGFm3j6BRyXKyDi48Li1NMfFTxW2xzoSrn2kddA+JVr8K0MRw14lRyxgTWlcviAD6Ya48mBgKvsvb3IbHOnlyegjYGHIi1v5SJPTbwbxpYorFq+jQ14HLsp3wuV96AotGObh6cz+VOjQwo4p2ebmrc3JRzVRsIEeQy7HbKbVUrAyH6uS64zXO7V89AiGDfYr6Y3Gi2MhCyP7jx3aptIORW2y13Kg4l/wLwr4DfpU7nF8jgYFRgnEkVAAAAAElFTkSuQmCC" InformativeScreenshot="4098f5cac5c31127defeef9514732b1f.jpg" Selector="&lt;html app='msedge.exe' title='Home | Hostinger' /&gt;" Title="Home | Hostinger" Url="https://hpanel.hostinger.com/" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <usia:SendMessage ActivityInstanceId="c4c9f4d7-6bfd-49b6-aac4-212b634c66fc" BindingsVersion="2.1" BusinessEntityName="conversations_chat" ConfiguredBusinessEntity="conversations_chat" ConnectionId="cc91aff7-c969-4bc1-b260-e743db3fbd7c" Connector="uipath-salesforce-slack" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send Message to Channel" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="SendMessage_2">
+      <usia:SendMessage.BusinessEntity>
+        <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID0}" Name="conversations_chat">
+          <uibi:BusinessEntity.AllFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="10">
+              <uiisi:OperationEntityField x:TypeArguments="usic:Conversations_chat" ArgumentDirection="In" ArgumentType="usic:Conversations_chat" DataType="Conversations_chat" Description="The channel message object body" DisplayName="Body" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="usic:Conversations_chat" ArgumentDirection="Out" ArgumentType="usic:Conversations_chat" DataType="Conversations_chat" Description="The conversations_chat object returned." DisplayName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPermanentlyHidden">True</x:Boolean>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID1" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Type the name or ID of the public or private channel to which the message must be sent. If channel is not found in the drop-down, you can first scroll the drop-down till the bottom to get all the available channels and then type the channel or retrieve the channel name from Slack application → Right click on that channel → Click on 'Copy' → Click on 'Copy name' → Pass the copied channel name without '#'" DisplayName="Channel" FormDataType="ExpressionTextBox" InArgumentValue="C064L8C20H5" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.channel" Order="1" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">C064L8C20H5</InArgument>
+                </uiisi:OperationEntityField.ArgumentValue>
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+                <uiisi:OperationEntityField.Value>
+                  <Literal x:TypeArguments="x:String">C064L8C20H5</Literal>
+                </uiisi:OperationEntityField.Value>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID2" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The formatted text of the message to be sent" DisplayName="Message" FormDataType="ExpressionTextBox" InArgumentValue="[vFAS_Username]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.text" Order="1" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">[vFAS_Username]</InArgument>
+                </uiisi:OperationEntityField.ArgumentValue>
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+                <uiisi:OperationEntityField.Value>
+                  <VisualBasicValue x:TypeArguments="x:String">[vFAS_Username]</VisualBasicValue>
+                </uiisi:OperationEntityField.Value>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID3" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Change how messages are treated. Pass 'none' for removing hyperlinks and pass 'full' to ignore slack's default formatting" DisplayName="Formatting options (parse)" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.parse" Order="3" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.EnumValues>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>none</x:String>
+                    <x:String>full</x:String>
+                  </scg:List>
+                </uiisi:OperationEntityField.EnumValues>
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="s:Nullable(x:Boolean)" x:Name="__ReferenceID4" ArgumentDirection="In" ArgumentType="s:Nullable(x:Boolean)" DataType="Boolean" Description="Whether to link and mention all the user groups automatically if the respective names are mentioned in the text message?" DisplayName="Link names" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.link_names" Order="3" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="s:Nullable(x:Boolean)" x:Name="__ReferenceID5" ArgumentDirection="In" ArgumentType="s:Nullable(x:Boolean)" DataType="Boolean" Description="Whether to display the preview of the links mentioned in the text message?" DisplayName="Unfurl links" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.unfurl_links" Order="3" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID6" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Only supported with 'Bot Token' connection. Customize the bot's user name while sending messages. The bot name will be defaulted to 'UiPath' if nothing is passed" DisplayName="Bot name" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.username" Order="3" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID7" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Only supported with 'Bot Token' connection. Customize the bot’s icon with an emoji available in the workspace. For example, ':chart_with_upwards_trend'. If we provide an emoji that is not available in the workspace, it will be ignored" DisplayName="Bot icon" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.icon_emoji" Order="3" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID8" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="The ID (timestamp) of the message sent" DisplayName="Message timestamp" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.ts" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+            </scg:List>
+          </uibi:BusinessEntity.AllFields>
+          <uibi:BusinessEntity.EntityMetadata>
+            <uibi:EntityMetadata DisplayName="conversations_chat" EligibleOperations="1" IsCustomEntity="False" Name="conversations_chat">
+              <uibi:EntityMetadata.Metadata>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                  <x:String x:Key="Object">conversations_chat</x:String>
+                  <x:String x:Key="Client">UiPath.Slack.IntegrationService.Client.Conversations_chatAPIClient</x:String>
+                  <x:String x:Key="Operation">CreateConversations_chat</x:String>
+                  <x:String x:Key="Path">/conversations_chat</x:String>
+                </scg:Dictionary>
+              </uibi:EntityMetadata.Metadata>
+            </uibi:EntityMetadata>
+          </uibi:BusinessEntity.EntityMetadata>
+          <uibi:BusinessEntity.SelectedFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
+              <x:Reference>__ReferenceID1</x:Reference>
+              <x:Reference>__ReferenceID2</x:Reference>
+              <x:Reference>__ReferenceID3</x:Reference>
+              <x:Reference>__ReferenceID4</x:Reference>
+              <x:Reference>__ReferenceID5</x:Reference>
+              <x:Reference>__ReferenceID6</x:Reference>
+              <x:Reference>__ReferenceID7</x:Reference>
+              <x:Reference>__ReferenceID8</x:Reference>
+            </scg:List>
+          </uibi:BusinessEntity.SelectedFields>
+          <uibi:BusinessEntity.TelemetryProperties>
+            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+          </uibi:BusinessEntity.TelemetryProperties>
+        </uibi:BusinessEntity>
+      </usia:SendMessage.BusinessEntity>
+      <usia:SendMessage.CachedLookupValues>
+        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)">
+          <scg:List x:TypeArguments="uiisi:LookupValue" x:Key="body_channel" Capacity="1">
+            <uiisi:LookupValue StringFormatDisplayColumns="{x:Null}" Id="C064L8C20H5">
+              <uiisi:LookupValue.DisplayColumns>
+                <scg:List x:TypeArguments="x:String" Capacity="4">
+                  <x:String>fabrikon-rpa</x:String>
+                  <x:String>C064L8C20H5</x:String>
+                </scg:List>
+              </uiisi:LookupValue.DisplayColumns>
+            </uiisi:LookupValue>
+          </scg:List>
+        </scg:Dictionary>
+      </usia:SendMessage.CachedLookupValues>
+      <usia:SendMessage.DesignConnectionRequest>
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="cc91aff7-c969-4bc1-b260-e743db3fbd7c" ConnectionName="m.jaswanth@fabrikonaisystems.com" ConnectorKey="uipath-salesforce-slack">
+          <uiisi:ConnectionParameters.TelemetryInfo>
+            <uiisi:TelemetryInfo ActivityPack="UiPath.Slack.IntegrationService.Activities" ActivityPackVersion="5.2.0" Source="StudioDesktop" />
+          </uiisi:ConnectionParameters.TelemetryInfo>
+        </uiisi:ConnectionParameters>
+      </usia:SendMessage.DesignConnectionRequest>
+      <usia:SendMessage.SelectedFields>
+        <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
+          <x:Reference>__ReferenceID1</x:Reference>
+          <x:Reference>__ReferenceID2</x:Reference>
+          <x:Reference>__ReferenceID3</x:Reference>
+          <x:Reference>__ReferenceID4</x:Reference>
+          <x:Reference>__ReferenceID5</x:Reference>
+          <x:Reference>__ReferenceID6</x:Reference>
+          <x:Reference>__ReferenceID7</x:Reference>
+          <x:Reference>__ReferenceID8</x:Reference>
+        </scg:List>
+      </usia:SendMessage.SelectedFields>
+      <usia:SendMessage.TelemetryProperties>
+        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+      </usia:SendMessage.TelemetryProperties>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </usia:SendMessage>
+    <uga:SendEmailConnections Attachments="{x:Null}" Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" ConnectionId="976ebfc1-2801-4d2a-809f-1e60f8d8546c" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="[UiPath.GSuite.Activities.Gmail.Enums.MailImportance.High]" InputType="TEXT" SaveAsDraft="False" Subject="Your Creditinals" TextBody="[vBody +&quot; &quot;+  vFAS_Username]" To="[New String(){&quot;jayanthmokara@gmail.com&quot;}]" UseConnectionService="True">
+      <uga:SendEmailConnections.ArgumentAttachments>
+        <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="4">
+          <InArgument x:TypeArguments="upr:IResource">[LocalResource.FromPath("C:\\Users\\Admin\\Documents\\UiPath\\Screenshots\\Untitled.png")]</InArgument>
+        </scg:List>
+      </uga:SendEmailConnections.ArgumentAttachments>
+      <uga:SendEmailConnections.AttachmentsBackup>
+        <usau1:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="Builder">
+          <usau1:BackupSlot.BackupValues>
+            <scg:List x:TypeArguments="x:Object" x:Key="UseExisting" Capacity="1">
+              <x:Null />
+            </scg:List>
+          </usau1:BackupSlot.BackupValues>
+        </usau1:BackupSlot>
+      </uga:SendEmailConnections.AttachmentsBackup>
+      <uga:SendEmailConnections.InputTypeBackup>
+        <usau1:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="TEXT">
+          <usau1:BackupSlot.BackupValues>
+            <scg:List x:TypeArguments="x:Object" x:Key="HTML" Capacity="1">
+              <x:Null />
+            </scg:List>
+            <scg:List x:TypeArguments="x:Object" x:Key="TEXT" Capacity="1">
+              <x:Null />
+            </scg:List>
+          </usau1:BackupSlot.BackupValues>
+        </usau1:BackupSlot>
+      </uga:SendEmailConnections.InputTypeBackup>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uga:SendEmailConnections>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,164.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_27">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ujia:InsertRecord Language="{x:Null}" ActivityInstanceId="6e6f38d7-4df3-4bec-b718-8d229e578a36" BindingsVersion="2.1" BusinessEntityName="Group and User" ConfiguredBusinessEntity="" ConnectionId="fb357aa2-997d-4d34-ba45-71565c0f69d9" Connector="uipath-atlassian-jira" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Insert Record" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="InsertRecord_1" IsAdditionalPropertiesActive="True">
+            <ujia:InsertRecord.BusinessEntity>
+              <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID13}" Name="group_user">
+                <uibi:BusinessEntity.AllFields>
+                  <scg:List x:TypeArguments="uibi:EntityField" Capacity="7">
+                    <uiisi:OperationEntityField x:TypeArguments="ujic:Group_user" ArgumentDirection="In" ArgumentType="ujic:Group_user" DataType="Group_user" Description="The request body" DisplayName="Body" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body" ShouldFilterOnChange="False" />
+                    <x:Reference>__ReferenceID9</x:Reference>
+                    <x:Reference>__ReferenceID10</x:Reference>
+                    <x:Reference>__ReferenceID11</x:Reference>
+                    <uiisi:OperationEntityField x:TypeArguments="scg:IDictionary(x:String, x:Object)" Description="{x:Null}" ArgumentDirection="In" ArgumentType="scg:IDictionary(x:String, x:Object)" ContainingType="Group_user" DataType="IDictionary" DisplayName="AdditionalProperties" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.AdditionalProperties" ShouldFilterOnChange="False" />
+                    <x:Reference>__ReferenceID12</x:Reference>
+                    <uiisi:OperationEntityField x:TypeArguments="ujic:Group_user" ArgumentDirection="Out" ArgumentType="ujic:Group_user" DataType="Group_user" Description="The Group and User object returned." DisplayName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response" ShouldFilterOnChange="False" />
+                  </scg:List>
+                </uibi:BusinessEntity.AllFields>
+                <uibi:BusinessEntity.EntityMetadata>
+                  <uibi:EntityMetadata DisplayName="Group and User" EligibleOperations="1" IsCustomEntity="False" Name="group_user">
+                    <uibi:EntityMetadata.Metadata>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID13">
+                        <x:String x:Key="Object">group_user</x:String>
+                        <x:String x:Key="Client">UiPath.Jira.IntegrationService.Client.Group_userAPIClient</x:String>
+                        <x:String x:Key="Operation">CreateGroupUser</x:String>
+                        <x:String x:Key="Path">/group/{id}/user</x:String>
+                      </scg:Dictionary>
+                    </uibi:EntityMetadata.Metadata>
+                  </uibi:EntityMetadata>
+                </uibi:BusinessEntity.EntityMetadata>
+                <uibi:BusinessEntity.SelectedFields>
+                  <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
+                    <x:Reference>__ReferenceID9</x:Reference>
+                    <x:Reference>__ReferenceID10</x:Reference>
+                    <x:Reference>__ReferenceID11</x:Reference>
+                    <x:Reference>__ReferenceID12</x:Reference>
+                  </scg:List>
+                </uibi:BusinessEntity.SelectedFields>
+                <uibi:BusinessEntity.TelemetryProperties>
+                  <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                </uibi:BusinessEntity.TelemetryProperties>
+              </uibi:BusinessEntity>
+            </ujia:InsertRecord.BusinessEntity>
+            <ujia:InsertRecord.CachedLookupValues>
+              <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
+            </ujia:InsertRecord.CachedLookupValues>
+            <ujia:InsertRecord.DesignConnectionRequest>
+              <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="fb357aa2-997d-4d34-ba45-71565c0f69d9" ConnectionName="m.jaswanth@fabrikonaisystems.com-fabrikonai" ConnectorKey="uipath-atlassian-jira">
+                <uiisi:ConnectionParameters.TelemetryInfo>
+                  <uiisi:TelemetryInfo ActivityPack="UiPath.Jira.IntegrationService.Activities" ActivityPackVersion="6.1.0" Source="StudioDesktop" />
+                </uiisi:ConnectionParameters.TelemetryInfo>
+              </uiisi:ConnectionParameters>
+            </ujia:InsertRecord.DesignConnectionRequest>
+            <ujia:InsertRecord.SelectedFields>
+              <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
+                <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID9" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The name of the group (case sensitive)." DisplayName="Groupname" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="groupname" ShouldFilterOnChange="False" />
+                <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID10" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The groupname" DisplayName="Id" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="id" ShouldFilterOnChange="False" />
+                <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID11" ArgumentDirection="In" ArgumentType="x:String" ContainingType="Group_user" DataType="String" Description="The account ID of the user, which uniquely identifies the user across all Atlassian products. For example, *5b10ac8d82e05b22cc7d4ef5*." DisplayName="Account ID" FormDataType="ExpressionTextBox" InArgumentValue="[vFAS_Username]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.AccountId" ShouldFilterOnChange="False">
+                  <uiisi:OperationEntityField.ArgumentValue>
+                    <InArgument x:TypeArguments="x:String">[vFAS_Username]</InArgument>
+                  </uiisi:OperationEntityField.ArgumentValue>
+                  <uiisi:OperationEntityField.Value>
+                    <VisualBasicValue x:TypeArguments="x:String">[vFAS_Username]</VisualBasicValue>
+                  </uiisi:OperationEntityField.Value>
+                </uiisi:OperationEntityField>
+                <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID12" ArgumentDirection="In" ArgumentType="x:String" ContainingType="Group_user" DataType="String" Description="The name of group." DisplayName="Name" FormDataType="ExpressionTextBox" InArgumentValue="[vFAS_Username]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Name" ShouldFilterOnChange="False">
+                  <uiisi:OperationEntityField.ArgumentValue>
+                    <InArgument x:TypeArguments="x:String">[vFAS_Username]</InArgument>
+                  </uiisi:OperationEntityField.ArgumentValue>
+                  <uiisi:OperationEntityField.Value>
+                    <VisualBasicValue x:TypeArguments="x:String">[vFAS_Username]</VisualBasicValue>
+                  </uiisi:OperationEntityField.Value>
+                </uiisi:OperationEntityField>
+              </scg:List>
+            </ujia:InsertRecord.SelectedFields>
+            <ujia:InsertRecord.TelemetryProperties>
+              <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+            </ujia:InsertRecord.TelemetryProperties>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ujia:InsertRecord>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Username sent to Slack user&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[vFirstUserRecord]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[vListofUser]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,164.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Log in to continue - Log in with Atlassian account" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="9eedb5ba-70a4-4ca0-9df3-93eeea6bdbca" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1846" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="vJiraUsername" />
+                    <Variable x:TypeArguments="ss:SecureString" Name="vJiraPassword" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Jira" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="388,144.66666666666666" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[vJiraPassword]" Username="[vJiraUsername]" />
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="9eedb5ba-70a4-4ca0-9df3-93eeea6bdbca" Text="[vJiraUsername]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://id.atlassian.com/login?continue=https%3A%2F%2Fstart.atlassian.com%2F&amp;application=start" CvElementArea="718, 399, 483, 63" CvType="InputBox" DesignTimeRectangle="723, 474, 474, 54" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT username'" FullSelectorArgument="&lt;webctrl id='username' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='username' tag='INPUT' type='email' class='css-1cab8vv' aaname='' /&gt;" Guid="7d6abcb4-064e-44b8-8dd5-7effa3e025d3" InformativeScreenshot="0bb40ef7e1aca46139329738add76e07.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Log in to continue - Log in with Atlassian account' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Continue'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9eedb5ba-70a4-4ca0-9df3-93eeea6bdbca" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://id.atlassian.com/login?continue=https%3A%2F%2Fstart.atlassian.com%2F&amp;application=start" CvElementArea="716, 470, 485, 65" CvTextArea="912, 492, 93, 21" CvTextArgument="Continue" CvType="Button" DesignTimeRectangle="720, 473, 480, 60" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Continue'" FullSelectorArgument="&lt;webctrl id='login-submit' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='login-submit' tag='BUTTON' type='submit' class='css-1w9zxjf css-1edgkow' aaname='Continue' check:innerText='Continue' /&gt;" Guid="6bcb449c-41b4-41b5-9462-40f65aa8f239" InformativeScreenshot="7180bf383f8c036dcce54cf136d093cf.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Log in to continue - Log in with Atlassian account' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvElementArea="716, 470, 485, 65" CvTextArea="912, 492, 93, 21" CvTextArgument="Continue" CvType="Button" DesignTimeRectangle="738, 473, 444, 60" ElementType="Text" FriendlyName="'Continue'" FullSelectorArgument="&lt;webctrl parentid='login-submit' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='login-submit' tag='SPAN' type='' class='css-178ag6o' aaname='Continue' check:innerText='Continue' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAcAAAABACAYAAACN4qcfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAVhSURBVHhe7d3PSxt5GMdx/4z8Cz326LXHHnv0Kp6kJ+kpp4KXQlhYEEqhIIUNQkEQQehFKCwGwTUou2QRQ1C0jT8qU0NkQkh4dpLMj+/EJ2qqdZsn7wdeh37mm8Rc/PQ7mYkTwjAMwzBjOBQgwzAMM5YzMfHiLwEAYOyoIQAA1qkhAADWqSEAANapIQAA1qkhAADWqSEAANapIQAA1qkhAADWqSEAANapIQAA1qkhAADWqSEAANapIQAA1qkhAADWqSEAANapIQAA1qkhAADWqSEAANapIQAA1qkhAADWqSEAANapIQAA1qkhgEc3+eFCCpUrWVstS0Y5DuCBqSFgxj/yfPFc1k9b4jclmWZbvNO65BdLymP+DxVZ9sKfTa5kXl0D4EGpIWBB9kjWvoWdMmCqmxX9sT9FSaZXPSkEZVzZ6H/dXZne6DW0Xz6RydQxAD+FGgKjLnsiRb/bJ93xT2uSXzqQ5/P7PW+/SP7vhpT+fMwCTHZ5j1u8AFRqCIy0kuTK7V7TSFtKn36Vz9QoQOCXoobAKHv3XaKP07ydo6HKL/M62BlWmqnPC/3LhqyvVeRJ39pcOVzgeTL1siILe8HjWr3Iv/Rl+cO/8dqpTfcDSHeuJKc937XHBetm9iS76YsXRc2mFPovmFm5ig7K8u9OnjqWvGYse5R+3622VCsXkn29m14HWKKGwAhLSqMp+Tf6Gs1kUBDOWdPuhTLu9H82FxfW5ZUUw8ZNXWgjjfj1pz43xKu3k+fvXIRTbwVq8QUvNxdgQ4rhrjb9Gm0pLDkl9QMFmFm4kKD7ehP+XFGRSzNYm3WeA7BEDYGRtSu5SvjL+/K7TKtrFNkzKYUP86sXMjsXlkpn17UTtUNbiivJVaNxYQXjH54Hu8BePrlUT3ag24fx+ttOgd5cgMF4tXhHlskFpRXGcngmT8P1wxeg8zNtHSa73JmDOPf3vnJbBmxSQ2BkObcTOEVym7hoOjueV/3Hy5KPriY9TsomKUBfFlKP2Zf8aXiocuKUx30KsCVr79Lrs6Vwh+oW/ZAFmPlY7+1K/ZrMuWs7x1bD9c26ZPuOASaoITCynPK5cwE6u8ZUYSXiInKKQiusiH7sPgWYPm058NiQBTi9FZ3rvGmuvzZgghoCI2x+4M5sEGfXWD5RjutlY6EA49dsNqW0V5eC6lxm3ecBrFBDYIQ9/ZRcylL5XFbXpJVk4Th6wC07QOd0o4UCnNtRTqMC40INgVE280UKUTcERbDu3I4wyOx2eCrwts8Agx1iVJD3KUBv6yC1ftBjhi7AxVp4pWlb1hfT6+Oyc9Yn/1kY7opZwAQ1BEZc/y0NXsWT3NvwW2ACU4tf098E8ya5qnLwVaCtoFSSWw7uU4DyzZMXM7c/ZugCfOVczXp8EV6ZuivP/qhJNcwHrZfLusy79/293O/ed7i+HP4bsEYNgZEX/NJfTm5HGDTuqcjb7gOsbhykTo8OX4DOTrM7bfFbSRk9SAEG7zu+OjSc3n2DbSmWG91/9z9X//v2/c79iclzFFeStYApaggYkZk7kIVtX6rOL/TO+PWmlLbPZbbvm06e/HbW+8sRUU+1On81oibv3+9d+2zwRwpwYqYsuc43xoSHpXnXG+HvWoCBzmsEu1svvpk9/MYY5TPASPy+wxXdcu58A876oTzr26kCZqghAADWqSEAANapIQAA1qkhAADWqSEAANapIQAA1qkhAADWqSEAANapIQAA1qkhAADWqSEAANapIQAA1qkhAADWqSEAANapIQAA1qkhAADWqSEAANapIQAA1qkhAADWqSEAANapIQAA1gnDMAzDjOFQgAzDMMwYjsh/gE50qG/NIL4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'SPAN'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_5" IsPassword="True" ScopeIdentifier="9eedb5ba-70a4-4ca0-9df3-93eeea6bdbca" SecureText="[vJiraPassword]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://id.atlassian.com/login?application=start&amp;continue=https%3A%2F%2Fstart.atlassian.com%2F&amp;email=m.jaswanth%40fabrikonaisystems.com" CvElementArea="719, 471, 483, 60" CvType="InputBox" DesignTimeRectangle="723, 545, 435, 54" DesignTimeScaleFactor="1.5" ElementType="InputBoxPassword" FriendlyName="'INPUT password'" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='css-1cab8vv' aaname='' /&gt;" Guid="d7067f21-9f9c-4445-9e6f-8d16a1f7e787" InformativeScreenshot="ba1703d8edfddbc92e9dd6225dfa47b9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Log in to continue - Log in with Atlassian account' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvElementArea="717, 540, 485, 65" CvType="Button" DesignTimeRectangle="1155, 555, 36, 36" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl class='css-snhnyn' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span' parentid='form-login' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='css-snhnyn' type='' parentid='form-login' tag='SPAN' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABoSURBVFhHzcgxAQAwDMCgapzueuoMRAAHDzNvj5YpyZRkSjIlmZJMSaYkU5IpyZRkSjIlmZJMSaYkU5IpyZRkSjIlmZJMSaYkU5IpyZRkSjIlmZJMSaYkU5IpyZRkSjIlmZJMSSZj7wPKKDYEvDISVAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log in'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9eedb5ba-70a4-4ca0-9df3-93eeea6bdbca" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://id.atlassian.com/login?application=start&amp;continue=https%3A%2F%2Fstart.atlassian.com%2F&amp;email=m.jaswanth%40fabrikonaisystems.com" CvElementArea="717, 611, 484, 66" CvTextArea="927, 633, 63, 27" CvTextArgument="Log in" CvType="Button" DesignTimeRectangle="720, 613, 480, 60" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Log in'" FullSelectorArgument="&lt;webctrl id='login-submit' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='login-submit' tag='BUTTON' type='submit' class='css-1w9zxjf css-1edgkow' aaname='Log in' check:innerText='Log in' /&gt;" Guid="341ef31f-1ee3-4dcc-962b-0a36745278b1" InformativeScreenshot="1da43760a43ae4e3b4309e7ef5c1edcc.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Log in to continue - Log in with Atlassian account' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'fabrikonai'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9eedb5ba-70a4-4ca0-9df3-93eeea6bdbca" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://start.atlassian.com/" CvElementArea="481, 421, 118, 122" CvType="Icon" DesignTimeRectangle="488, 428, 108, 108" DesignTimeScaleFactor="1.5" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;button&amp;gt;div&amp;gt;div' idx='7' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='sc-bdVaJa kXHmcb' parentid='root' tag='DIV' aaname='' /&gt;" Guid="063f7ab8-22aa-447d-a832-d1b003e45a6d" InformativeScreenshot="776288f8cda97a1ab0246720cbfd05c9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Atlassian | Start page' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="500, 579, 82, 19" CvTextArgument="fabrikonai" CvType="Text" DesignTimeRectangle="447, 578, 189, 24" ElementType="Text" FriendlyName="'fabrikonai'" FullSelectorArgument="&lt;webctrl aaname='fabrikonai' idx='3' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='fabrikonai' type='' parentid='root' tag='DIV' class='sc-jWBwVP unJPv' check:innerText='fabrikonai' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMEAAAAcCAYAAADY4tttAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAI2SURBVHhe7ZhBcsIgFIZ7bg/QTdZuunOVCziOB3DnuOwNdMZb0MADCryHIbGdWt7/zbCAPEmo/0ewbwYA5UACoB5IANQDCYB6IAFQDyQA6oEEQD3qJDiPH2bzbtvenP3YHO4z46fv/Qy342g225O5+T74O1RJ4MK8InjPS/BpdpN4w/Hu+68twdq/039FkQQ8iK1Agr6BBA08LwEHx6HXARI0AAn6RoUELnCTAGmLMlz27NruQpcCUYLryQxpbRlid300h+vdHLZUQ/dpOw65+xR14bPxnuy6hWrsc+drtc/iSwKt68VxqEekN4ENa/5fIgpRHh4KxWiGLBg+nOmYl2CYavPwzUtAAhSf84HNnjmImL2ZvkVJa2nOdH1L1gsJOkSSQILq0t2Rh8njAxlrfZ/f47EEogAusJXndXKk9V6C8shWPp9IZb2QoEceSBB216SldS4U4m+CYs5q6OoSnIWd2OHmEsYd5Xw8yERlzS3rhQQ9IgWCxqRdlYWiWQIpuHxOOobwAEbYbp9Szkf9eQmo37ReSNAjrV92pe6BBDF8SyWw95bO/ZZfeBMsWi8k6JHGL1sIpauTfhOUu/UaCWxHFIF/JsLeElS7SoLaeiFBj1SCKIRJlmBq6dsgnKvZ2AoJQr+oEeXw983GGiVYtF5I0CM8iJYYcNfsbs/rXM0U9hDU0Mq5npHAEudPx4NsSauFfU4CS/N6IQEAeoAEQD2QAKgHEgD1QAKgHkgA1AMJgHKM+QIrjY1J+y2S/gAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'SPAN'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="9eedb5ba-70a4-4ca0-9df3-93eeea6bdbca" Text="UiPath Automation " Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://fabrikonai.atlassian.net/jira/projects?selectedProjectType=software" CvElementArea="74, 775, 340, 60" CvType="InputBox" DesignTimeRectangle="80, 855, 294, 42" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT keyword'" FullSelectorArgument="&lt;webctrl id='keyword' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='keyword' tag='INPUT' type='text' class='css-1cab8vv' aaname='' /&gt;" Guid="4f203242-de00-4914-a5f0-0a5ddae1fe04" InformativeScreenshot="947e1d67ce890ddc3e7bfdf627324efd.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Projects - Jira' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="374, 864, 24, 24" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' parentid='ak-main-content' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='ak-main-content' tag='SPAN' class='css-1wits42' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAArSURBVEhL7c1BEQAwEAOh+jedmmDutRjg7VghV8gVcoVcIVfIFXKFXCG2fUQwNHWSDPSpAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'UiPath Automation'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9eedb5ba-70a4-4ca0-9df3-93eeea6bdbca" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://fabrikonai.atlassian.net/jira/projects?keyword=UiPath%20Automation&amp;page=1&amp;sortKey=name&amp;sortOrder=ASC&amp;types=software" CvTextArea="185, 864, 178, 21" CvTextArgument="UiPath Automation" CvType="Text" DesignTimeRectangle="187, 861, 176, 28" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'UiPath Automation'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='UiPath Automation' tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='UiPath Automation' type='' tag='SPAN' class='_18u0xy5q _1reo15vq _18m915vq _1bto1l2s' check:innerText='UiPath Automation' /&gt;" Guid="f13f9dbd-bb62-4cc3-b315-e96236573f68" InformativeScreenshot="a29201b7e8bf2a4faa7a5a89df8d2887.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Projects - Jira' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvElementArea="134, 855, 46, 45" CvType="Icon" DesignTimeRectangle="139, 861, 36, 36" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='IMG' class='_1o9zidpf _1bsb1tcg _4t3i1tcg _2hwx2bgk _2rko1l7b _1e0c1o8l _s7n4nkob' aaname='UiPath Automation' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKGSURBVFhH7ZhNaBNBGIZ7FlG8e1LUtChoPVhtmqRpi2abCqZt7E9Q2vqDtVCoWDwoXhQvQVF6UFEvFkVQFAR/LkovehAPxZNWFIQodsOSVKutiJ87436bmWbWzC5xEkNfeCA738zOw+zOBqYKyjz/oeCNCwCHIwDxjWohc5K5F4QXPNkvHqwS4sAkJ0jsRQNKAbOSOcFSPFYniIuVnKCoYymxsijoGSuVIzh/eggyL56DPjOvBIy04Oz4mD145skDSH/SwZh+CdnUfdp28Z1h14sBRloQV8+Yekuvv11Nwo/JZvj1bAlceW9A1aPXRZXEuBYkZCceQ/qzAYY+CZmPD2kbkcR6McBIC07cuqMUjLTggcYorKnrUgZmUdArGM+Cm1sGpKj293LjfMF93LUTGE+Cbz7owp0nIpX+CuH2YTpu+1kdopcBtLFZWBfos+8nAuNasKYhAdPZOaGME1rvKB2743yGChKqw4Oc0EIwnlZwQ3APRLqPSrEteoibeL02Cr7Qfq5NBKYyN4mvbje0+GM2TSZYW9XYByu7jkmzOrjXHsuCcS3oM/kZ35RXH2nSaH3puXv0f1mW5afGOTEE42kFv3TU5tUHw620tuzMTaGIEytOXLPvy4Lx/A7W13fYbDVha8UAU5mbZEvkIMT6jzvCTrTL3wmxhk6uTQaMa8Ha5gHhx5jl+t2ntO9wqB1gp0YZMX+zAoXAeFrBV1MpoRiSvHSb9us2V+57WyvMtWmQCLh7TzGe38Eaf8IRrp/JWuZaFkxlbhIVYHKCBQ6PVAqGAnFLihUscPymUjA5dMSSYgVJ/nKAqUqwJ9JjyfwJL0jicAT8rwXJY2VXDpMvWGYpc0GA38yjtahbN7JOAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-11, -11, 1942, 1042" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAF5SURBVDhPldPfSsJgGAbw4R+0IMQKrRxWogZdQlfRSRElIURlUaRoaVEOLbqCjqKzDjvrJNELCIJArCSCQipElgWGRcXc1/PBt1hWNj/4IRvv8+5hTK7R8SaInmKXzR+E/TDBLps7CDrgAk7Bzm5rP/TJIDEBdlv7QWgHCHMC2ltg2AiHLEw118Idl0wIHKkWaG+hH82O60eywxjeV4Wp/1u0+q94ky9/bhzL5Z3R6i4CsmoB1biFZaYQbpu6llsmL2Xr7C19ByVVmPq7RVeozHculnLtc/fEMl0gWHTsFqSDugXU7y346HO4J/Ik24Mi6VwoEmvg7sYZq/owLKrC1M8WnmSNd8Xfc71rL4SPVkh3+JHYlsQiDGJ4TxVWfG/h3SIRz6ZM3AmJ9G+8EedqlThWKmf20EMHBoegzIKKGswrYQMIkIEU2qRcwke6b/112RYUdRikH5UAaUgxGYiBTlliBDM1sE1/ZbM7Wfv6G2PQAOY6Bo7juE979jL4eaVciwAAAABJRU5ErkJggg==" InformativeScreenshot="4dcecc60ea5d28b0e05406c20d6f7f1e.jpg" Selector="&lt;html app='msedge.exe' title='Log in to continue - Log in with Atlassian account' /&gt;" Title="Log in to continue - Log in with Atlassian account" Url="https://id.atlassian.com/login?continue=https%3A%2F%2Fstart.atlassian.com%2F&amp;application=start" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>
