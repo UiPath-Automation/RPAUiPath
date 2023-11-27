@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="kWbs84tOLkK9LIodoMf23w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="9, 200, 1920, 829" DesignTimeScaleFactor="1.25" FriendlyName="'chrome-untrusted://new-…'" FullSelectorArgument="&lt;ctrl name='New Tab' role='document' /&gt;&lt;ctrl idx='4' role='document' /&gt;" FuzzySelectorArgument="&lt;ctrl name='New Tab' role='document' /&gt;&lt;ctrl automationid='' role='document' check:text='chrome-untrusted://new-tab-page/one-google-bar?paramsencoded=' /&gt;" Guid="b8c05c92-6ae3-470d-be72-5e0afd6f9d82" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='New Tab - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="4be8cd11d84e9297ef3a8cc632583a80.png" xmlns="">0zbWI7bbvgkinxRprt55Jrg</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

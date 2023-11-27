@@ -1,0 +1,14 @@
+﻿{
+  "Name": "chrome-untrusted://new-…",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "Bxvyh4cIaUaGSv7-19-unw",
+  "Reference": "4_x5PU2m2EWSzMReXGPwgA/Bxvyh4cIaUaGSv7-19-unw",
+  "ParentRef": "4_x5PU2m2EWSzMReXGPwgA/2TUyEkBZBk2fsUdxvpOtTw",
+  "Created": "2023-11-22T07:17:50.7877744Z",
+  "Updated": "2023-11-22T07:17:50.7877744Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
