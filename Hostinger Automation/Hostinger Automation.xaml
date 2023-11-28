@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>984.8,8469.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1132,8469.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -737,7 +737,7 @@
     </uix:NApplicationCard>
     <usia:SendMessage Language="{x:Null}" ActivityInstanceId="c4c9f4d7-6bfd-49b6-aac4-212b634c66fc" BindingsVersion="2.1" BusinessEntityName="conversations_chat" ConfiguredBusinessEntity="conversations_chat" ConnectionId="cc91aff7-c969-4bc1-b260-e743db3fbd7c" Connector="uipath-salesforce-slack" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send Message to Channel" sap:VirtualizedContainerService.HintSize="592,52.8" sap2010:WorkflowViewState.IdRef="SendMessage_2">
       <usia:SendMessage.BusinessEntity>
-        <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID0}" Name="conversations_chat">
+        <uibi:BusinessEntity Name="conversations_chat">
           <uibi:BusinessEntity.AllFields>
             <scg:List x:TypeArguments="uibi:EntityField" Capacity="10">
               <uiisi:OperationEntityField x:TypeArguments="usic:Conversations_chat" ArgumentDirection="In" ArgumentType="usic:Conversations_chat" DataType="Conversations_chat" Description="The channel message object body" DisplayName="Body" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body" ShouldFilterOnChange="False" />
@@ -825,17 +825,16 @@
             </scg:List>
           </uibi:BusinessEntity.AllFields>
           <uibi:BusinessEntity.EntityMetadata>
-            <uibi:EntityMetadata DisplayName="conversations_chat" EligibleOperations="1" IsCustomEntity="False" Name="conversations_chat">
-              <uibi:EntityMetadata.Metadata>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
-                  <x:String x:Key="Object">conversations_chat</x:String>
-                  <x:String x:Key="Client">UiPath.Slack.IntegrationService.Client.Conversations_chatAPIClient</x:String>
-                  <x:String x:Key="Operation">CreateConversations_chat</x:String>
-                  <x:String x:Key="Path">/conversations_chat</x:String>
-                </scg:Dictionary>
-              </uibi:EntityMetadata.Metadata>
-            </uibi:EntityMetadata>
+            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID0}" DisplayName="conversations_chat" EligibleOperations="1" IsCustomEntity="False" Name="conversations_chat" />
           </uibi:BusinessEntity.EntityMetadata>
+          <uibi:BusinessEntity.Metadata>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+              <x:String x:Key="Object">conversations_chat</x:String>
+              <x:String x:Key="Client">UiPath.Slack.IntegrationService.Client.Conversations_chatAPIClient</x:String>
+              <x:String x:Key="Operation">CreateConversations_chat</x:String>
+              <x:String x:Key="Path">/conversations_chat</x:String>
+            </scg:Dictionary>
+          </uibi:BusinessEntity.Metadata>
           <uibi:BusinessEntity.SelectedFields>
             <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
               <x:Reference>__ReferenceID1</x:Reference>
@@ -940,7 +939,7 @@
           </sap:WorkflowViewStateService.ViewState>
           <ujia:InsertRecord Language="{x:Null}" ActivityInstanceId="6e6f38d7-4df3-4bec-b718-8d229e578a36" BindingsVersion="2.1" BusinessEntityName="Group and User" ConfiguredBusinessEntity="" ConnectionId="fb357aa2-997d-4d34-ba45-71565c0f69d9" Connector="uipath-atlassian-jira" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Insert Record" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="InsertRecord_1" IsAdditionalPropertiesActive="True">
             <ujia:InsertRecord.BusinessEntity>
-              <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID13}" Name="group_user">
+              <uibi:BusinessEntity Name="group_user">
                 <uibi:BusinessEntity.AllFields>
                   <scg:List x:TypeArguments="uibi:EntityField" Capacity="7">
                     <uiisi:OperationEntityField x:TypeArguments="ujic:Group_user" ArgumentDirection="In" ArgumentType="ujic:Group_user" DataType="Group_user" Description="The request body" DisplayName="Body" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body" ShouldFilterOnChange="False" />
@@ -953,17 +952,16 @@
                   </scg:List>
                 </uibi:BusinessEntity.AllFields>
                 <uibi:BusinessEntity.EntityMetadata>
-                  <uibi:EntityMetadata DisplayName="Group and User" EligibleOperations="1" IsCustomEntity="False" Name="group_user">
-                    <uibi:EntityMetadata.Metadata>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID13">
-                        <x:String x:Key="Object">group_user</x:String>
-                        <x:String x:Key="Client">UiPath.Jira.IntegrationService.Client.Group_userAPIClient</x:String>
-                        <x:String x:Key="Operation">CreateGroupUser</x:String>
-                        <x:String x:Key="Path">/group/{id}/user</x:String>
-                      </scg:Dictionary>
-                    </uibi:EntityMetadata.Metadata>
-                  </uibi:EntityMetadata>
+                  <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID13}" DisplayName="Group and User" EligibleOperations="1" IsCustomEntity="False" Name="group_user" />
                 </uibi:BusinessEntity.EntityMetadata>
+                <uibi:BusinessEntity.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID13">
+                    <x:String x:Key="Object">group_user</x:String>
+                    <x:String x:Key="Client">UiPath.Jira.IntegrationService.Client.Group_userAPIClient</x:String>
+                    <x:String x:Key="Operation">CreateGroupUser</x:String>
+                    <x:String x:Key="Path">/group/{id}/user</x:String>
+                  </scg:Dictionary>
+                </uibi:BusinessEntity.Metadata>
                 <uibi:BusinessEntity.SelectedFields>
                   <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
                     <x:Reference>__ReferenceID9</x:Reference>
